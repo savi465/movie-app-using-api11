@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+body {
+    background : rgb(191, 229, 191);
+}
+/* navbar styling */
+nav {
+    background-color: light rgb(162, 50, 50) !important;
+    color:black;
+}
+.navbar{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 18px;
+}
+.search-container input, button {
+    padding: 5px 10px;
+    border: none;
+    font-size: 18px;
+}
+.search-container input {
+    border-radius: 3px 0 0 3px;
+}
+.search-container button {
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    background: orange;
+    transition: all 0.2s;
+}
+.search-container button:hover {
+    background: light rgb(45, 45, 44);
+}
+/* main section */
+main{
+   max-width: 1200px;
+   margin: 0 auto;
+   margin-block: 38px;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+.movie-container {
+    display: flex;
+    background: rgb(238, 215, 215);
+    box-shadow: 0px 0px 10px lightgrey;
+    border-radius: 5px;
+}
+.movie-poster img {
+    height: 450px;
+    margin-right: 30px;
+    border-radius: 5px 0 0 5px;
+}
+.movie-info {
+    padding-inline: 15px;
+}
+.movie-info h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0 12px 0;
+}
+.movie-info h2+p {
+    text-align: center;
+}
+.movie-info .movie-genre {
+    display: flex;
+    justify-content: center;
+    margin-block: 5px;
+    overflow-x: auto;
+}
+
+.movie-info .movie-genre p {
+      background: #cecbcb;
+      color: white;
+      padding: 5px 10px;
+      margin-inline: 5px;
+      border: 2px solid black;
+      border-radius: 5px;
+      font-weight: 700;
+}
+.movie-info p {
+    font-size: 18px;
+    margin-block: 16px;
+    line-height: 25px;
+}
+.movie-container .noBackground {
+    background: none;
+    box-shadow: none;
+    align-items: center;
+}
+/* footer */
+footer {
+    background-color: light rgb(162, 50, 50) !important;
+    color:black;
+    text-align: center;
+    padding-block: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+/* responsive code */
+@media screen and (max-width:950px){
+    .movie-container {
+        flex-direction: column;
+
+    }
+    .movie-poster img {
+        width: 100%;
+        height: fit-content;
+        margin-right: 0;
+    }
+    .movie-info {
+        padding-inline: 30px;
+    }
+}
+@media screen and (max-width:950px){
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
